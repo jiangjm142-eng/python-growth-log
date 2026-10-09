@@ -1,1 +1,95 @@
+2026년 10월 9일 — Git & GitHub 기초 학습 기록
 
+1. 오늘의 학습 목표
+Git과 GitHub의 차이 이해하기
+Git 설치 및 VS Code 연동하기
+GitHub 저장소를 VS Code로 가져오기
+폴더 이름 변경하기
+Commit과 Push를 이용해 GitHub에 변경 사항 업로드하기
+
+2. Git과 GitHub의 차이
+Git
+파일의 변경 이력을 기록하고 관리하는 버전 관리 도구다.
+
+GitHub
+Git으로 관리하는 프로젝트를 인터넷에 저장하고 공유할 수 있는 온라인 서비스다.
+
+VS Code
+코드를 작성하고 파일을 관리하며, Git 기능을 이용할 수 있는 코드 편집기다.
+
+세 도구의 관계
+VS Code: 코드를 작성하고 파일을 수정하는 곳
+Git: 변경 사항을 기록하고 관리하는 도구
+GitHub: 변경 기록을 온라인에 업로드하는 곳
+
+3. Git 설치 및 환경 설정
+① Git 설치 확인
+터미널에서 다음 명령어를 실행한다.
+git --version
+Git 버전이 출력되면 정상적으로 설치된 것이다.
+
+② Git 사용자 이름 설정
+git config --global user.name "사용자 이름"
+
+③ Git 사용자 이메일 설정
+git config --global user.email "이메일 주소"
+
+④ 설정 확인
+git config --global user.name
+git config --global user.email
+--global은 해당 컴퓨터의 모든 Git 저장소에서 공통으로 사용할 설정이라는 뜻이다.
+
+※ Git 사용자 이름과 이메일 설정은 커밋 작성자 정보를 지정하는 것이며, GitHub 로그인 인증과는 별개다.
+
+⑤ 한글 파일 이름 표시 설정
+git config --global core.quotepath false
+Git이 한글 파일명을 표시할 때 숫자 이스케이프 형태로 나타내는 현상을 줄여 주는 설정이다. 실제 파일 이름을 변경하는 명령어는 아니다.
+
+4. Git의 핵심 개념
+① Working Directory (작업 디렉터리)
+내 컴퓨터에서 파일을 작성하거나 수정하는 공간이다.
+
+② Staging Area (스테이징 영역)
+커밋에 포함할 변경 사항을 선택해 두는 공간이다.
+
+③ Commit (커밋)
+선택한 변경 사항을 로컬 Git 기록으로 저장하는 작업이다.
+
+④ Push (푸시)
+로컬에 저장한 커밋을 GitHub의 원격 저장소로 업로드하는 작업이다.
+
+전체 흐름
+작업 → 스테이징 → 커밋 → 푸시 → GitHub에서 확인
+
+5. 오늘 실제로 완료한 작업
+Git 설치 및 버전 확인
+Git 사용자 이름과 이메일 설정
+VS Code에서 GitHub 저장소 Clone
+프로젝트 내부 폴더 5개의 이름 변경
+변경 사항 스테이징 및 커밋
+GitHub 원격 저장소로 Push
+
+명령어	역할
+git clone	GitHub 저장소를 컴퓨터로 가져오기
+git status	변경 사항 확인
+git add -A	변경 사항을 커밋 대상으로 선택
+git commit -m "메시지"	변경 사항 기록
+git push	GitHub에 업로드
+
+###오늘 반드시 기억할 핵심 3가지###
+
+1. Commit과 Push는 다르다.
+Commit은 내 컴퓨터에 변경 기록을 저장하고, Push는 그 기록을 GitHub에 올린다.
+
+
+2. Git 명령어의 기본 흐름을 익히자.
+git status → git add -A → git commit → git push
+
+
+3. Git은 파일 변경 이력을 관리한다.
+폴더 이름을 변경하는 작업도 Git이 추적할 수 있고, 커밋과 푸시를 통해 그 변경 기록을 GitHub에 남길 수 있다.
+
+오늘의 소감
+Git과 GitHub를 처음 연결하면서 Git 설치, 사용자 정보 설정, 저장소 복제, 폴더 이름 변경, 커밋, 푸시까지 직접 경험했다.
+특히 로컬에서 변경한 파일을 Git으로 기록하고 GitHub에 업로드하는 과정을 이해했다. 
+앞으로 파이썬 학습과 프로젝트를 진행하면서 GitHub를 활용해 코드와 학습 기록을 꾸준히 관리할 계획이다.
